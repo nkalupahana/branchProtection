@@ -1,4 +1,5 @@
 {
   "master": ["kushtimusPrime"],
-  "control": ["nkalupahana"]
+  "control": ["nkalupahana"],
+  "feature/branchProtection": []
 }
