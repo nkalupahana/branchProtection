@@ -14,4 +14,8 @@ if (!owners[branch] || owners[branch].includes(user)) {
 }
 
 const { exec } = require('child_process');
-exec("chmod a+x revert-commit.bash; ./revert-commit.bash")
+exec("chmod a+x revert-commit.bash; ./revert-commit.bash", (err, stdout, stderr) => {
+    console.log(err);
+    console.log(stdout);
+    console.log(stderr);
+});
