@@ -12,9 +12,8 @@ if (!owners[branch]) {
     console.log(PASS);
     return;
 } else if (owners[branch].includes(user)) {
-        console.log(PASS);
-        return;
-    }
+    console.log(PASS);
+    return;
 }
 
 console.log(FAIL);
