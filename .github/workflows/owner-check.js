@@ -1,6 +1,20 @@
 const fs = require("fs");
 const owners = JSON.parse(fs.readFileSync("../../codeowners.json"));
 
-console.log(owners);
-console.log(process.argv[2]);
-console.log(process.argv[3].split("refs/head/")[1]);
+const PASS = 1;
+const FAIL = -1;
+
+
+const user = process.argv[2]);
+const branch = process.argv[3].split("refs/heads/")[1]);
+
+if (!owners[branch]) {
+    console.log(PASS);
+    return;
+} else if (owners[branch].includes(user)) {
+        console.log(PASS);
+        return;
+    }
+}
+
+console.log(FAIL);
