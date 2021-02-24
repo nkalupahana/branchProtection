@@ -6,12 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Set up Node.js
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
     - 
-      name: Check
+      name: Check Commit
       run: |
         cd ./.github/workflows
-        node owner-check.js $GITHUB_ACTOR
+        node owner-check.js $GITHUB_ACTOR $GITHUB_REF
