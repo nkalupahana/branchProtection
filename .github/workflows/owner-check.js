@@ -3,4 +3,4 @@ const owners = JSON.parse(fs.readFileSync("../../codeowners.json"));
 
 console.log(owners);
 console.log(process.argv[2]);
-console.log(process.argv[3]);
+console.log(process.argv[3].split("refs/head/")[1]);
