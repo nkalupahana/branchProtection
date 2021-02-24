@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo REJECT
-git diff
+git stash
 git revert HEAD --no-edit
 git status
 git push
