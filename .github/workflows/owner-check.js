@@ -11,7 +11,7 @@ const https = require("https");
     });
     
     console.log(owners);
-});
+})();
 
 
 
