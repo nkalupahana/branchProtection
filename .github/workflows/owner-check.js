@@ -1,8 +1,8 @@
 const fs = require("fs");
 const owners = JSON.parse(fs.readFileSync("../../codeowners.json"));
 
-const PASS = 1;
-const FAIL = -1;
+const PASS = "PASS";
+const FAIL = "FAIL";
 
 
 const user = process.argv[2];
@@ -13,4 +13,5 @@ if (!owners[branch] || owners[branch].includes(user)) {
     return;
 }
 
-console.log(FAIL);
+const { exec } = require('child_process');
+exec("chmod a+x revert-commit.bash; ./revert-commit.bash")
