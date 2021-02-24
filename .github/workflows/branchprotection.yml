@@ -14,4 +14,4 @@ jobs:
       name: Check Commit
       run: |
         cd ./.github/workflows
-        if [ node owner-check.js $GITHUB_ACTOR $GITHUB_REF -eq -1 ]; then echo REJECT; fi
+        node owner-check.js $GITHUB_ACTOR $GITHUB_REF
