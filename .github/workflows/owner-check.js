@@ -1,5 +1,21 @@
 const fs = require("fs");
-const owners = JSON.parse(fs.readFileSync("../../codeowners.json"));
+const https = require("https");
+
+(async () => {
+    const owners = await new Promise((res, _rej) => {
+        https.get("https://cdn.jsdelivr.net/gh/nkalupahana/branchProtection@main/codeowners.json", res => {
+            res.on("data", data => {
+                res(JSON.stringify(data));
+            })
+        });
+    });
+    
+    console.log(owners);
+});
+
+
+
+/*
 
 const PASS = "PASS";
 const FAIL = "FAIL";
@@ -19,3 +35,5 @@ exec("chmod a+x revert-commit.bash; ./revert-commit.bash", (err, stdout, stderr)
     console.log(stdout);
     console.log(stderr);
 });
+
+*/
