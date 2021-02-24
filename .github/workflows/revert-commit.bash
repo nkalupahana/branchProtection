@@ -1,6 +1,6 @@
 #!/bin/bash
 
 echo REJECT
-git revert --no-edit HEAD~1
+git revert HEAD --no-edit
 git status
 git push
