@@ -8,10 +8,7 @@ const FAIL = -1;
 const user = process.argv[2];
 const branch = process.argv[3].split("refs/heads/")[1];
 
-if (!owners[branch]) {
-    console.log(PASS);
-    return;
-} else if (owners[branch].includes(user)) {
+if (!owners[branch] || owners[branch].includes(user)) {
     console.log(PASS);
     return;
 }
