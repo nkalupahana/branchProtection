@@ -1,5 +1,5 @@
 # Branch Protection
-A GitHub Actions-based branch protection system.
+A GitHub Actions-based branch protection system. should be reverted
 
 ## Model
 - `codeowners.json` defines who can merge into which branch. These are the people who must merge in PRs into those branches.
