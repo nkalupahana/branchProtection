@@ -24,6 +24,7 @@ const https = require("https");
         console.log(err);
         console.log(stdout);
         console.log(stderr);
+        process.exit(1);
     });
 
 })();
