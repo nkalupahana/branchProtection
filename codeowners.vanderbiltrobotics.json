@@ -1,6 +1,6 @@
 {
   "master": ["kushtimusPrime"],
   "control": ["nkalupahana"],
-  "cameras": ["meyerv11045"],
+  "cameras": ["meyerv11045", "kushtimusPrime"],
   "state_machine": ["Ace314159"]
 }
